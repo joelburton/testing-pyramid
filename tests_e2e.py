@@ -41,6 +41,10 @@ class TaxResultsTests(LiveServerTestCase):
         msg = self.driver.find_element_by_class_name("owed").text
         self.assertIn("$1280.00", msg)
 
+    # You'd have more e2e tests in a real app -- but definitely not trying to
+    # test every possible tax outcome; just focusing on testing the overall app
+    # and any particular browser things (javascript interactions, etc)
+
 
 if __name__ == '__main__':
     unittest.main()
